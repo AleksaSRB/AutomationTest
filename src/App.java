@@ -22,12 +22,9 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         String NameOfLanguageDependencyOnPage;
-
-        System.out.println("Hello, World!");
         System.setProperty("webdriver.chrome.driver","C:\\Users\\Laptop\\javaSelenium\\seleniumJava\\src\\drivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://boardgamegeek.com/");
-        System.out.println(driver.getTitle());
         Thread.sleep(1000);
         driver.findElement(By.cssSelector("#hompage-container > gg-home-game-explorer-row-hotness > gg-home-game-explorer-row > section > gg-card-scroll > div > div > gg-home-game-explorer-row-hotness-items > ul > li:nth-child(1) > div > div.media-card__body > h3 > a")).click();
         Thread.sleep(1000);
